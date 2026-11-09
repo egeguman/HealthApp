@@ -43,7 +43,8 @@ struct TodayView: View {
     }
 }
 
-private struct DayHeader: View {
+/// Day title with previous/next arrows, shared by Today and Activity.
+struct DayHeader: View {
     @Environment(AppModel.self) private var model
 
     var body: some View {

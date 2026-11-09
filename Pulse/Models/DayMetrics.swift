@@ -114,6 +114,8 @@ nonisolated struct WorkoutStrain: Identifiable, Hashable, Sendable {
     let strain: Double
     let averageHR: Double?
     let maxHR: Double?
+    /// Minutes in each heart-rate zone during the workout.
+    var zoneMinutes: [Double] = Array(repeating: 0, count: 5)
 
     var id: UUID { workout.id }
 }

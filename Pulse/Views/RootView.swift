@@ -24,7 +24,7 @@ struct RootView: View {
 }
 
 enum AppTab: Hashable {
-    case today, trends, settings
+    case today, activity, trends, settings
 }
 
 struct MainTabView: View {
@@ -34,6 +34,9 @@ struct MainTabView: View {
         TabView(selection: $tab) {
             Tab("Today", systemImage: "circle.circle", value: AppTab.today) {
                 TodayView()
+            }
+            Tab("Activity", systemImage: "figure.run", value: AppTab.activity) {
+                ActivityView()
             }
             Tab("Trends", systemImage: "chart.bar.xaxis", value: AppTab.trends) {
                 TrendsView()
@@ -66,6 +69,7 @@ enum LaunchOptions {
 
     static var initialTab: AppTab {
         switch openArgument {
+        case "activity": .activity
         case "trends": .trends
         case "settings": .settings
         default: .today

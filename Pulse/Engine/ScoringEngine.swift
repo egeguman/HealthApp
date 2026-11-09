@@ -90,7 +90,8 @@ nonisolated struct ScoringEngine {
             .map { workout in
                 let readings = snapshot.heartRate.slice(from: workout.start, to: workout.end)
                 let load = cardioLoad(readings, until: workout.end, restingHR: strainRestingHR, maxHR: maxHR, sex: snapshot.profile.sex)
-                return WorkoutStrain(workout: workout, strain: Self.strain(forLoad: load.load), averageHR: readings.meanValue, maxHR: readings.maxValue)
+                return WorkoutStrain(workout: workout, strain: Self.strain(forLoad: load.load), averageHR: readings.meanValue, maxHR: readings.maxValue,
+                                     zoneMinutes: load.zoneMinutes)
             }
         // The watch samples every few seconds during workouts but every few minutes otherwise,
         // so averaging 5-minute buckets keeps workouts from dominating the day's average.
