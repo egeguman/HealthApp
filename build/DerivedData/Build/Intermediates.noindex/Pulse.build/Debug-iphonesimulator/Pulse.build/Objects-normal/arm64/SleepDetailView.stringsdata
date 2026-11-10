@@ -12,7 +12,7 @@
       },
       {
         "comment": "",
-        "key": "SLEEP PERFORMANCE",
+        "key": "SLEEP SCORE",
         "location": {
           "startingColumn": 30,
           "startingLine": 13
@@ -20,7 +20,7 @@
       },
       {
         "comment": "",
-        "key": "%@ of %@ needed",
+        "key": "%@ of %@ needed · %@",
         "location": {
           "startingColumn": 34,
           "startingLine": 18

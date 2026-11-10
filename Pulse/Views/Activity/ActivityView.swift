@@ -267,7 +267,7 @@ private struct SleepActivityCard: View {
         VStack(alignment: .leading, spacing: 14) {
             ActivityCardHeader(symbol: "moon.fill", color: Theme.sleep, title: "Sleep",
                                subtitle: Format.timeRange(sleep.start, sleep.end),
-                               value: Format.percent(sleep.performance), caption: "performance")
+                               value: Format.percent(sleep.score), caption: "sleep score")
             HStack {
                 StatCell(title: "Asleep", value: Format.duration(sleep.asleep))
                 StatCell(title: "Need", value: Format.duration(sleep.need.total))

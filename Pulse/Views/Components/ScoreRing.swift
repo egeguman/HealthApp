@@ -101,7 +101,7 @@ extension ScoreRing {
         guard let sleep = day?.sleep else {
             return ScoreRing(progress: 0, color: Theme.sleep, value: "–", size: size, lineWidth: lineWidth)
         }
-        return ScoreRing(progress: sleep.performance, color: Theme.sleep, value: "\(Int((sleep.performance * 100).rounded()))",
+        return ScoreRing(progress: sleep.score, color: Theme.sleep, value: "\(Int((sleep.score * 100).rounded()))",
                          unit: "%", size: size, lineWidth: lineWidth)
     }
 }

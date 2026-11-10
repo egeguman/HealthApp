@@ -76,25 +76,27 @@ struct ScoreGuideView: View {
             VStack(alignment: .leading, spacing: 16) {
                 guide(symbol: "bolt.heart.fill", color: Theme.green, title: "Recovery · 0–100%", text: """
                     How prepared your body is to take on strain, calculated each morning. It compares last night's heart rate \
-                    variability (50% weight), resting heart rate (20%), sleep performance (20%) and respiratory rate (10%) \
-                    with your own 30-day baseline. Everyone's numbers are different, so only your trend matters.
+                    variability (50% weight), resting heart rate (20%), sleep score (15%), respiratory rate (5%), wrist \
+                    temperature (5%) and how your heart rate trended overnight (5%) with your own 30-day baseline. \
+                    Everyone's numbers are different, so only your trend matters.
 
                     Green (67–100%): primed for a hard day.
                     Yellow (34–66%): maintain with moderate effort.
                     Red (0–33%): your body is stressed, so rest and recover.
                     """)
                 guide(symbol: "flame.fill", color: Theme.strain, title: "Strain · 0–21", text: """
-                    How much load your heart took on today, from workouts and everything else. It uses time above 50% of your \
-                    max heart rate, weighting harder efforts exponentially (Banister TRIMP), then maps it onto a logarithmic \
-                    0–21 scale.
+                    How much load your heart took on today, from workouts and everything else. Every minute above 50% of your \
+                    max heart rate earns load by zone, 1 point in zone 1 up to 5 in zone 5 (Edwards TRIMP). Strain is \
+                    21 × ln(load + 1) / ln(7201), a logarithmic scale where a full day in zone 5 would be exactly 21.
 
                     0–9 Light · 10–13 Moderate · 14–17 High · 18–21 All out.
                     Your optimal strain target rises with your recovery.
                     """)
                 guide(symbol: "moon.stars.fill", color: Theme.sleep, title: "Sleep · 0–100%", text: """
-                    Sleep performance is the share of your sleep need you actually got. Your need starts at your baseline \
-                    (set in Settings), and goes up after high-strain days and when you're carrying sleep debt from recent short nights. \
-                    Naps count toward it.
+                    Your sleep score combines hours slept against your need (50%), efficiency (20%), deep + REM sleep (20%) \
+                    and bed/wake consistency (10%). Your need starts at your baseline (set in Settings), and goes up after \
+                    high-strain days and when you're carrying sleep debt: about half of each night's shortfall carries over \
+                    to the next night, up to 2 hours. Naps count toward it.
                     """)
                 Text("Pulse is a wellness app, not a medical device. Talk to a doctor about any health concerns.")
                     .font(.caption)

@@ -1,0 +1,19 @@
+{
+  "" : {
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/PulseTests.build/Objects-normal/arm64/PulseTests-primary.dia",
+    "emit-module-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/PulseTests.build/Objects-normal/arm64/PulseTests-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/PulseTests.build/Objects-normal/arm64/PulseTests-primary-emit-module.dia",
+    "pch" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/PulseTests.build/Objects-normal/arm64/PulseTests-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/PulseTests.build/Objects-normal/arm64/PulseTests-primary.swiftdeps"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/PulseTests/ScoringEngineTests.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/PulseTests.build/Objects-normal/arm64/ScoringEngineTests.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/PulseTests.build/Objects-normal/arm64/ScoringEngineTests.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/PulseTests.build/Objects-normal/arm64/ScoringEngineTests.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/PulseTests.build/Objects-normal/arm64/ScoringEngineTests.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/PulseTests.build/Objects-normal/arm64/ScoringEngineTests.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/PulseTests.build/Objects-normal/arm64/ScoringEngineTests.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/PulseTests.build/Objects-normal/arm64/ScoringEngineTests.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/PulseTests.build/Objects-normal/arm64/ScoringEngineTests~partial.swiftmodule"
+  }
+}

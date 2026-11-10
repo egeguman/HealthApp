@@ -19,6 +19,9 @@ struct ScoringEngineTests {
         var hrv: Double = 55
         var restingHR: Double = 52
         var sleepHours: Double = 7.5
+        /// How much heart rate climbs per hour through the night.
+        var heartRateRisePerHour: Double = 0
+        var wristTemperature: Double?
     }
 
     /// One day per night: sleep 11 PM → wake, with heart rate and HRV readings during it.
@@ -33,8 +36,12 @@ struct ScoringEngineTests {
             snapshot.sleep.append(SleepSample(start: bed, end: wake, stage: .core, source: "watch"))
             var time = bed
             while time < wake {
-                snapshot.heartRate.append(Reading(date: time, value: night.restingHR))
+                let hours = time.timeIntervalSince(bed) / 3600
+                snapshot.heartRate.append(Reading(date: time, value: night.restingHR + night.heartRateRisePerHour * hours))
                 time.addTimeInterval(300)
+            }
+            if let temperature = night.wristTemperature {
+                snapshot.wristTemperature.append(Reading(date: wake, value: temperature))
             }
             for i in 1...3 {
                 snapshot.hrv.append(Reading(date: bed.addingTimeInterval(Double(i) * 3600), value: night.hrv))
@@ -49,23 +56,38 @@ struct ScoringEngineTests {
 
     // MARK: - Strain
 
-    @Test func strainScaleIsBoundedAndMonotonic() {
+    @Test func strainScaleIsLogarithmicAndBounded() {
         #expect(ScoringEngine.strain(forLoad: 0) == 0)
         let values = [10.0, 50, 100, 200, 400, 1000].map(ScoringEngine.strain(forLoad:))
         #expect(values == values.sorted())
         #expect(values.last! < StrainSummary.maximum)
+        // A full day in zone 5 is the ceiling.
+        #expect(abs(ScoringEngine.strain(forLoad: 5 * 1440) - StrainSummary.maximum) < 1e-9)
+        // Doubling the load adds a roughly constant amount of strain.
+        let step1 = ScoringEngine.strain(forLoad: 400) - ScoringEngine.strain(forLoad: 200)
+        let step2 = ScoringEngine.strain(forLoad: 800) - ScoringEngine.strain(forLoad: 400)
+        #expect(abs(step1 - step2) < 0.05)
+    }
+
+    @Test func loadIsZoneWeightedMinutes() {
+        // 20 min in zone 2 (65% of 190) then 10 min in zone 5 (95%).
+        let readings = (0..<180).map { i in
+            Reading(date: Self.start.addingTimeInterval(Double(i) * 10), value: i < 120 ? 123.5 : 180.5)
+        }
+        let load = engine.cardioLoad(readings[...], until: Self.start.addingTimeInterval(30 * 60), maxHR: 190)
+        #expect(abs(load.load - (20 * 2 + 10 * 5)) < 0.5)
     }
 
     @Test func everydayHeartRateBuildsNoStrain() {
         let readings = (0..<100).map { Reading(date: Self.start.addingTimeInterval(Double($0) * 300), value: 80) }
-        let load = engine.cardioLoad(readings[...], until: Self.start.addingTimeInterval(30_000), restingHR: 55, maxHR: 190, sex: .male)
+        let load = engine.cardioLoad(readings[...], until: Self.start.addingTimeInterval(30_000), maxHR: 190)
         #expect(load.load == 0)
         #expect(load.zoneMinutes.allSatisfy { $0 == 0 })
     }
 
     @Test func fortyFiveMinuteRunIsModerateToHighStrain() {
         let readings = (0..<(45 * 6)).map { Reading(date: Self.start.addingTimeInterval(Double($0) * 10), value: 155) }
-        let load = engine.cardioLoad(readings[...], until: Self.start.addingTimeInterval(45 * 60), restingHR: 55, maxHR: 190, sex: .male)
+        let load = engine.cardioLoad(readings[...], until: Self.start.addingTimeInterval(45 * 60), maxHR: 190)
         let strain = ScoringEngine.strain(forLoad: load.load)
         #expect((10...16).contains(strain))
         #expect(abs(load.zoneMinutes[3] - 45) < 0.5) // 155 / 190 = 82% → zone 4
@@ -97,13 +119,61 @@ struct ScoringEngineTests {
         #expect(recovery?.zone == .yellow)
     }
 
+    @Test func feverishWristTemperatureLowersRecovery() {
+        let baseline = baselineNights(14).enumerated().map { index, night in
+            var night = night
+            night.wristTemperature = 35 + Double(index % 3 - 1) * 0.1
+            return night
+        }
+        let normal = engine.score(snapshot(baseline + [Night(wristTemperature: 35)])).days.last?.recovery
+        let feverish = engine.score(snapshot(baseline + [Night(wristTemperature: 36)])).days.last?.recovery
+        #expect(normal?.contributors.first { $0.kind == .wristTemperature }?.effect == 0)
+        #expect(feverish!.score < normal!.score)
+    }
+
+    @Test func risingOvernightHeartRateLowersRecovery() {
+        let baseline = baselineNights(14).enumerated().map { index, night in
+            var night = night
+            night.heartRateRisePerHour = -1 + Double(index % 3 - 1) * 0.3
+            return night
+        }
+        let falling = engine.score(snapshot(baseline + [Night(heartRateRisePerHour: -1)])).days.last
+        let rising = engine.score(snapshot(baseline + [Night(heartRateRisePerHour: 1.5)])).days.last
+        #expect(abs((falling?.overnightHRTrend ?? 0) + 1) < 0.01)
+        #expect((rising?.recovery?.contributors.first { $0.kind == .overnightHeartRate }?.effect ?? 0) < 0)
+        #expect(rising!.recovery!.score < falling!.recovery!.score)
+    }
+
     // MARK: - Sleep
 
-    @Test func sleepDebtDoesNotCompound() {
+    @Test func sleepDebtCarriesOverButIsCapped() {
         let nights = (0..<10).map { _ in Night(sleepHours: 5) }
-        let days = engine.score(snapshot(nights)).days
-        let needs = days.compactMap { $0.sleep?.need.total }
-        #expect(needs.allSatisfy { $0 <= 7.5 * 3600 + 45 * 60 + 1 })
+        let needs = engine.score(snapshot(nights)).days.compactMap { $0.sleep?.need }
+        // Night 2 carries 55% of night 1's 2.5 h shortfall.
+        #expect(abs(needs[1].debt - 0.55 * 2.5 * 3600) < 1)
+        #expect(needs.map(\.debt) == needs.map(\.debt).sorted())
+        #expect(needs.allSatisfy { $0.debt <= ScoringEngine.maximumSleepDebt })
+    }
+
+    @Test func oneFullNightClearsMostSleepDebt() {
+        let nights = (0..<5).map { _ in Night(sleepHours: 5) } + [Night(sleepHours: 10), Night()]
+        let needs = engine.score(snapshot(nights)).days.compactMap { $0.sleep?.need }
+        #expect(needs[4].debt > 3600)
+        #expect(needs[6].debt == 0)
+    }
+
+    @Test func sleepScoreRewardsRestorativeSleep() {
+        let base = (asleep: 7.5 * 3600.0, need: 7.5 * 3600.0, efficiency: 0.92, consistency: 0.9)
+        let good = ScoringEngine.sleepScore(asleep: base.asleep, need: base.need, efficiency: base.efficiency, hasStages: true,
+                                            deep: 1.2 * 3600, rem: 1.8 * 3600, consistency: base.consistency)
+        let noDeep = ScoringEngine.sleepScore(asleep: base.asleep, need: base.need, efficiency: base.efficiency, hasStages: true,
+                                              deep: 0, rem: 3 * 3600, consistency: base.consistency)
+        let unstaged = ScoringEngine.sleepScore(asleep: base.asleep, need: base.need, efficiency: base.efficiency, hasStages: false,
+                                                deep: 0, rem: 0, consistency: base.consistency)
+        #expect(good > 0.9)
+        #expect(noDeep < good - 0.05)
+        // Without stage data the restorative part drops out instead of counting as zero.
+        #expect(unstaged > noDeep)
     }
 
     @Test func prefersWatchStagesOverDuplicateSources() {

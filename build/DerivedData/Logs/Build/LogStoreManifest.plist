@@ -6,7 +6,7 @@
 	<integer>13</integer>
 	<key>logs</key>
 	<dict>
-		<key>2047A766-2023-4DC4-9985-F653BDBB9374</key>
+		<key>078F5191-F8ED-426D-8917-6F37A01D0960</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>2047A766-2023-4DC4-9985-F653BDBB9374.xcactivitylog</string>
+			<string>078F5191-F8ED-426D-8917-6F37A01D0960.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -38,15 +38,57 @@
 			<key>schemeIdentifier-sharedScheme</key>
 			<integer>1</integer>
 			<key>signature</key>
-			<string>Building project Pulse with scheme Pulse and configuration Debug</string>
+			<string>Testing project Pulse with scheme Pulse</string>
 			<key>timeStartedRecording</key>
-			<real>816024480.65248299</real>
+			<real>816026143.57495701</real>
 			<key>timeStoppedRecording</key>
-			<real>816024499.58921897</real>
+			<real>816026145.82847703</real>
 			<key>title</key>
-			<string>Building project Pulse with scheme Pulse and configuration Debug</string>
+			<string>Testing project Pulse with scheme Pulse</string>
 			<key>uniqueIdentifier</key>
-			<string>2047A766-2023-4DC4-9985-F653BDBB9374</string>
+			<string>078F5191-F8ED-426D-8917-6F37A01D0960</string>
+		</dict>
+		<key>4F001189-17E8-458D-A766-FB74CAE566DF</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4F001189-17E8-458D-A766-FB74CAE566DF.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Pulse project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Pulse</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Testing project Pulse with scheme Pulse</string>
+			<key>timeStartedRecording</key>
+			<real>816025131.14872801</real>
+			<key>timeStoppedRecording</key>
+			<real>816025135.83886003</real>
+			<key>title</key>
+			<string>Testing project Pulse with scheme Pulse</string>
+			<key>uniqueIdentifier</key>
+			<string>4F001189-17E8-458D-A766-FB74CAE566DF</string>
 		</dict>
 	</dict>
 </dict>

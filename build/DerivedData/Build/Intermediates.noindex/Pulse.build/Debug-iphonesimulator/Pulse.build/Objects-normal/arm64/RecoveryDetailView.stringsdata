@@ -15,7 +15,7 @@
         "key": "Usual %@ %@",
         "location": {
           "startingColumn": 26,
-          "startingLine": 104
+          "startingLine": 114
         }
       },
       {
@@ -23,7 +23,7 @@
         "key": "Lower",
         "location": {
           "startingColumn": 30,
-          "startingLine": 113
+          "startingLine": 123
         }
       },
       {
@@ -31,7 +31,7 @@
         "key": "Your normal range",
         "location": {
           "startingColumn": 30,
-          "startingLine": 115
+          "startingLine": 125
         }
       },
       {
@@ -39,7 +39,7 @@
         "key": "Higher",
         "location": {
           "startingColumn": 30,
-          "startingLine": 117
+          "startingLine": 127
         }
       }
     ]

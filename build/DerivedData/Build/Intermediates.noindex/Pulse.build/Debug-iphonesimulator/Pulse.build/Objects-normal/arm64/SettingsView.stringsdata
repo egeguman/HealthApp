@@ -143,7 +143,7 @@
         "key": "How scores work",
         "location": {
           "startingColumn": 26,
-          "startingLine": 106
+          "startingLine": 108
         }
       },
       {
@@ -151,7 +151,7 @@
         "key": "Pulse is a wellness app, not a medical device. Talk to a doctor about any health concerns.",
         "location": {
           "startingColumn": 22,
-          "startingLine": 99
+          "startingLine": 101
         }
       }
     ]

@@ -24,9 +24,21 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>PlugIns/PulseTests.xctest/Info.plist</key>
+		<data>
+		zAGcimoAt1VbFUPDxDAGWLlm9iE=
+		</data>
+		<key>PlugIns/PulseTests.xctest/PulseTests</key>
+		<data>
+		YB+bYhz3H3uvjLvEmKjyhEng0SI=
+		</data>
+		<key>PlugIns/PulseTests.xctest/_CodeSignature/CodeResources</key>
+		<data>
+		Ksia2LMm1iNlfbtSPSilwRoBbLc=
+		</data>
 		<key>Pulse.debug.dylib</key>
 		<data>
-		v3EGBrAAOCVZFnpHQLTBNK6tBD4=
+		YUrEb8QMt/W0cZUD2QCiVFfjwYM=
 		</data>
 		<key>__preview.dylib</key>
 		<data>
@@ -56,11 +68,32 @@
 			K2WBm8vU5suJUUVzgO/l3stFZ+CeyLUnOlCxf+2ZdHw=
 			</data>
 		</dict>
+		<key>PlugIns/PulseTests.xctest/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3b30E1zAizCH5+5rCA8ksewmu3fVkpO/dr/K6uBDvWk=
+			</data>
+		</dict>
+		<key>PlugIns/PulseTests.xctest/PulseTests</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BOL1T3eovz1YmeoKSeKafskQmXi+esrbHDoIRL+ZeCo=
+			</data>
+		</dict>
+		<key>PlugIns/PulseTests.xctest/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			SEimoTYyOhOYXpaML4eadZqQnpz6B1UHAv182EmkpAc=
+			</data>
+		</dict>
 		<key>Pulse.debug.dylib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QV+dsk5ces47tMa0KbPwuP2b8GaTXf0qZoC9kwccXew=
+			wRmS+/jx15Zr/+sjMqfkcYXd7+qQzl+o2JLPN0XW+aA=
 			</data>
 		</dict>
 		<key>__preview.dylib</key>

@@ -1,0 +1,249 @@
+{
+  "" : {
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Pulse-primary.dia",
+    "emit-module-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Pulse-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Pulse-primary-emit-module.dia",
+    "pch" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Pulse-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Pulse-primary.swiftdeps"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/App/AppModel.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/AppModel.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/AppModel.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/AppModel.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/AppModel.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/AppModel.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/AppModel.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/AppModel.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/AppModel~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/App/PulseApp.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/PulseApp.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/PulseApp.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/PulseApp.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/PulseApp.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/PulseApp.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/PulseApp.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/PulseApp.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/PulseApp~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Engine/InsightEngine.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/InsightEngine.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/InsightEngine.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/InsightEngine.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/InsightEngine.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/InsightEngine.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/InsightEngine.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/InsightEngine.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/InsightEngine~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Engine/ScoringEngine.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoringEngine.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoringEngine.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoringEngine.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoringEngine.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoringEngine.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoringEngine.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoringEngine.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoringEngine~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Engine/SleepSessions.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepSessions.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepSessions.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepSessions.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepSessions.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepSessions.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepSessions.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepSessions.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepSessions~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Engine/Statistics.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Statistics.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Statistics.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Statistics.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Statistics.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Statistics.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Statistics.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Statistics.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Statistics~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Models/DayMetrics.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DayMetrics.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DayMetrics.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DayMetrics.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DayMetrics.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DayMetrics.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DayMetrics.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DayMetrics.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DayMetrics~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Models/Format.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Format.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Format.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Format.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Format.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Format.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Format.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Format.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Format~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Models/HealthData.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthData.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthData.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthData.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthData.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthData.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthData.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthData.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthData~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Services/DemoDataSource.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DemoDataSource.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DemoDataSource.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DemoDataSource.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DemoDataSource.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DemoDataSource.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DemoDataSource.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DemoDataSource.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/DemoDataSource~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Services/HealthKitService.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthKitService.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthKitService.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthKitService.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthKitService.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthKitService.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthKitService.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthKitService.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/HealthKitService~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Activity/ActivityView.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ActivityView.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ActivityView.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ActivityView.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ActivityView.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ActivityView.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ActivityView.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ActivityView.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ActivityView~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Components/ChartViews.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ChartViews.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ChartViews.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ChartViews.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ChartViews.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ChartViews.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ChartViews.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ChartViews.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ChartViews~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Components/MetricViews.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/MetricViews.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/MetricViews.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/MetricViews.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/MetricViews.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/MetricViews.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/MetricViews.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/MetricViews.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/MetricViews~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Components/ScoreRing.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoreRing.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoreRing.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoreRing.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoreRing.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoreRing.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoreRing.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoreRing.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/ScoreRing~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Components/Theme.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Theme.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Theme.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Theme.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Theme.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Theme.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Theme.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Theme.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/Theme~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Detail/RecoveryDetailView.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RecoveryDetailView.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RecoveryDetailView.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RecoveryDetailView.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RecoveryDetailView.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RecoveryDetailView.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RecoveryDetailView.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RecoveryDetailView.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RecoveryDetailView~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Detail/SleepDetailView.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepDetailView.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepDetailView.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepDetailView.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepDetailView.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepDetailView.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepDetailView.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepDetailView.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SleepDetailView~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Detail/StrainDetailView.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/StrainDetailView.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/StrainDetailView.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/StrainDetailView.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/StrainDetailView.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/StrainDetailView.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/StrainDetailView.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/StrainDetailView.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/StrainDetailView~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/RootView.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RootView.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RootView.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RootView.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RootView.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RootView.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RootView.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RootView.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/RootView~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Settings/SettingsView.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SettingsView.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SettingsView.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SettingsView.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/SettingsView~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Today/TodayView.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TodayView.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TodayView.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TodayView.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TodayView.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TodayView.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TodayView.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TodayView.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TodayView~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Trends/TrendsView.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TrendsView.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TrendsView.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TrendsView.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TrendsView.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TrendsView.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TrendsView.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TrendsView.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/TrendsView~partial.swiftmodule"
+  },
+  "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/Pulse.build/Debug-iphonesimulator/Pulse.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

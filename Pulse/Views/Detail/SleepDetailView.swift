@@ -10,12 +10,12 @@ struct SleepDetailView: View {
                 VStack(spacing: 16) {
                     VStack(spacing: 12) {
                         ScoreRing.sleep(day, size: 190, lineWidth: 16)
-                        Text("SLEEP PERFORMANCE")
+                        Text("SLEEP SCORE")
                             .font(.subheadline.weight(.heavy))
                             .tracking(1.5)
                             .foregroundStyle(Theme.sleep)
                         if let sleep = day.sleep {
-                            Text("\(Format.duration(sleep.totalAsleep)) of \(Format.duration(sleep.need.total)) needed")
+                            Text("\(Format.duration(sleep.totalAsleep)) of \(Format.duration(sleep.need.total)) needed · \(Format.percent(sleep.performance))")
                                 .font(.subheadline)
                                 .foregroundStyle(Theme.secondaryText)
                         }
@@ -93,7 +93,7 @@ private struct SleepContent: View {
             VStack(spacing: 10) {
                 needRow("Baseline need", sleep.need.baseline, "Set in Settings")
                 needRow("Recovering from strain", sleep.need.strain, "Hard days need more sleep")
-                needRow("Paying back sleep debt", sleep.need.debt, "From short nights recently")
+                needRow("Paying back sleep debt", sleep.need.debt, "About half of each shortfall carries over")
                 Divider().overlay(Theme.stroke)
                 HStack {
                     Text("Total need").font(.subheadline.weight(.semibold))

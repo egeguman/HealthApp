@@ -47,11 +47,13 @@ nonisolated struct Baselines: Hashable, Sendable {
     var wristTemperature: Baseline?
     /// Hours of sleep per night.
     var sleepHours: Baseline?
+    /// Overnight heart-rate slope, bpm per hour.
+    var overnightHRTrend: Baseline?
 }
 
 nonisolated struct RecoveryContributor: Identifiable, Hashable, Sendable {
     enum Kind: String, Hashable, Sendable {
-        case hrv, restingHR, sleep, respiratoryRate
+        case hrv, restingHR, sleep, respiratoryRate, wristTemperature, overnightHeartRate
     }
 
     var id: Kind { kind }
@@ -91,6 +93,8 @@ nonisolated struct SleepSummary: Hashable, Sendable {
     let napTime: TimeInterval
     let stageDurations: [SleepStage: TimeInterval]
     let need: SleepNeed
+    /// Overall sleep score, 0–1: hours vs need, efficiency, restorative sleep and consistency.
+    let score: Double
     /// Share of sleep need achieved, 0–1.
     let performance: Double
     /// Time asleep divided by time in bed, 0–1.
@@ -125,7 +129,7 @@ nonisolated struct StrainSummary: Hashable, Sendable {
 
     /// 0–21, logarithmic like the Borg scale: each point is harder to earn than the last.
     let score: Double
-    /// Raw cardiovascular load (TRIMP).
+    /// Raw cardiovascular load (Edwards TRIMP: zone-weighted minutes).
     let load: Double
     /// Minutes in each heart-rate zone (50–60%, 60–70%, 70–80%, 80–90%, 90–100% of max).
     let zoneMinutes: [Double]
@@ -146,6 +150,8 @@ nonisolated struct DayMetrics: Identifiable, Hashable, Sendable {
     var strainTarget: ClosedRange<Double>?
     var hrv: Double?
     var restingHR: Double?
+    /// How heart rate changed across the night, bpm per hour. Falling (negative) is the healthy pattern.
+    var overnightHRTrend: Double?
     var respiratoryRate: Double?
     var oxygenSaturation: Double?
     var wristTemperature: Double?

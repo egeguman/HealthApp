@@ -31,8 +31,8 @@ struct RecoveryDetailView: View {
                         .card()
 
                     ExplainerCard(title: "How Recovery works", text: """
-                        Each morning Pulse compares last night's heart rate variability, resting heart rate, sleep and breathing rate \
-                        with your own 30-day normal. HRV carries the most weight because it's the clearest signal of how relaxed \
+                        Each morning Pulse compares last night's heart rate variability, resting heart rate, sleep, breathing rate, \
+                        wrist temperature and overnight heart-rate trend with your own 30-day normal. HRV carries the most weight because it's the clearest signal of how relaxed \
                         your nervous system is. Green (67–100%) means you're ready for strain, yellow (34–66%) means maintain, \
                         and red (0–33%) means your body needs rest.
                         """)
@@ -60,11 +60,17 @@ private struct ContributorCard: View {
             ("Resting Heart Rate", "heart.fill", "bpm",
              "Your lowest heart rate while asleep. Above normal can signal stress, illness, alcohol or a late meal.")
         case .sleep:
-            ("Sleep Performance", "moon.stars.fill", "%",
-             "How much of last night's sleep need you got. Below 85% starts to hold recovery back.")
+            ("Sleep Score", "moon.stars.fill", "%",
+             "Last night's hours against your need, plus efficiency, deep and REM sleep, and consistency. Below 85% starts to hold recovery back.")
         case .respiratoryRate:
             ("Respiratory Rate", "lungs.fill", "rpm",
              "Breaths per minute while asleep. It's usually very stable, so a jump can be an early sign of illness.")
+        case .wristTemperature:
+            ("Wrist Temperature", "thermometer.medium", "°C",
+             "Skin temperature while asleep. Drifting well above or below your normal can be an early sign of illness or overreaching. It can only lower recovery.")
+        case .overnightHeartRate:
+            ("Overnight HR Trend", "chart.line.downtrend.xyaxis", "bpm/h",
+             "How your heart rate changed through the night. It normally falls as you recover; flatter or rising than usual often follows alcohol, a late meal or stress.")
         }
     }
 
@@ -77,7 +83,11 @@ private struct ContributorCard: View {
     }
 
     private func format(_ value: Double) -> String {
-        contributor.kind == .respiratoryRate ? Format.oneDecimal(value) : Format.whole(value)
+        switch contributor.kind {
+        case .respiratoryRate, .wristTemperature: Format.oneDecimal(value)
+        case .overnightHeartRate: String(format: "%+.1f", value)
+        case .hrv, .restingHR, .sleep: Format.whole(value)
+        }
     }
 
     var body: some View {

@@ -57,7 +57,8 @@ struct StrainDetailView: View {
                     ExplainerCard(title: "How Strain works", text: """
                         Strain measures how hard your heart worked, from 0 to 21. Only time above 50% of your max heart rate \
                         (\(Format.whole(model.maxHeartRate)) bpm) counts, and harder minutes count exponentially more. The scale is \
-                        logarithmic: going from 10 to 11 is easy, going from 18 to 19 takes a huge effort. The white arc on the ring \
+                        logarithmic: going from 10 to 11 is easy, going from 18 to 19 takes a huge effort. Each minute in zone 1 \
+                        adds 1 point of load and each minute in zone 5 adds 5. The white arc on the ring \
                         is today's optimal range, based on your recovery.
                         """)
                 }

@@ -33,10 +33,11 @@ nonisolated struct ScoringResult: Sendable {
 /// All scores are relative to the user's own history, so the same HRV can mean different
 /// things for different people.
 nonisolated struct ScoringEngine {
-    /// Cardiovascular load (TRIMP) that gets you ~63% of the way to 21 strain.
-    static let strainLoadConstant = 120.0
     /// Heart rate below this fraction of max doesn't build strain (everyday movement).
     static let strainThreshold = 0.5
+    /// Denominator of the logarithmic strain map. A full 24 hours in zone 5 is 5 × 1440 = 7200 TRIMP,
+    /// so ln(7200 + 1) / ln(7201) = 1 puts that theoretical ceiling exactly at 21.
+    static let strainLogDenominator = 7201.0
 
     var configuration = ScoringConfiguration()
     var calendar = Calendar.current
@@ -65,6 +66,7 @@ nonisolated struct ScoringEngine {
             ?? snapshot.hrv.slice(from: day.addingTimeInterval(-4 * 3600), to: day.addingTimeInterval(12 * 3600)).meanValue
         let restingHR = sleepingHeartRate(during: night, readings: snapshot.heartRate)
             ?? snapshot.restingHeartRate.slice(from: day, to: nextDay).meanValue
+        let overnightHRTrend = overnightHeartRateTrend(during: night, readings: snapshot.heartRate)
         let respiratoryRate = snapshot.respiratoryRate.slice(from: overnight.start, to: overnight.end).meanValue
         let oxygen = snapshot.oxygenSaturation.slice(from: overnight.start, to: overnight.end).meanValue
         let temperature = snapshot.wristTemperature
@@ -77,19 +79,19 @@ nonisolated struct ScoringEngine {
             respiratoryRate: Baseline(recent.compactMap(\.respiratoryRate)),
             oxygenSaturation: Baseline(recent.compactMap(\.oxygenSaturation)),
             wristTemperature: Baseline(recent.compactMap(\.wristTemperature)),
-            sleepHours: Baseline(recent.compactMap { $0.sleep.map { $0.totalAsleep / 3600 } })
+            sleepHours: Baseline(recent.compactMap { $0.sleep.map { $0.totalAsleep / 3600 } }),
+            overnightHRTrend: Baseline(recent.compactMap(\.overnightHRTrend))
         )
 
         // Strain
-        let strainRestingHR = restingHR ?? baselines.restingHR?.mean ?? 60
         let dayEnd = min(nextDay, snapshot.interval.end)
         let dayReadings = snapshot.heartRate.slice(from: day, to: nextDay)
-        let dayLoad = cardioLoad(dayReadings, until: dayEnd, restingHR: strainRestingHR, maxHR: maxHR, sex: snapshot.profile.sex)
+        let dayLoad = cardioLoad(dayReadings, until: dayEnd, maxHR: maxHR)
         let workouts = snapshot.workouts
             .filter { $0.start >= day && $0.start < nextDay }
             .map { workout in
                 let readings = snapshot.heartRate.slice(from: workout.start, to: workout.end)
-                let load = cardioLoad(readings, until: workout.end, restingHR: strainRestingHR, maxHR: maxHR, sex: snapshot.profile.sex)
+                let load = cardioLoad(readings, until: workout.end, maxHR: maxHR)
                 return WorkoutStrain(workout: workout, strain: Self.strain(forLoad: load.load), averageHR: readings.meanValue, maxHR: readings.maxValue,
                                      zoneMinutes: load.zoneMinutes)
             }
@@ -115,7 +117,8 @@ nonisolated struct ScoringEngine {
 
         // Recovery
         let recovery = recoveryScore(hrv: hrv, restingHR: restingHR, respiratoryRate: respiratoryRate,
-                                     sleepPerformance: sleep?.performance, history: recent, baselines: baselines)
+                                     sleepScore: sleep?.score, wristTemperature: temperature, overnightHRTrend: overnightHRTrend,
+                                     history: recent, baselines: baselines)
 
         let tonightNeed = sleepNeed(afterStrain: strain.score, recentSleeps: previousSleeps + (sleep.map { [$0] } ?? []))
 
@@ -128,6 +131,7 @@ nonisolated struct ScoringEngine {
             strainTarget: recovery.map { Self.strainTarget(forRecovery: $0.score) },
             hrv: hrv,
             restingHR: restingHR,
+            overnightHRTrend: overnightHRTrend,
             respiratoryRate: respiratoryRate,
             oxygenSaturation: oxygen,
             wristTemperature: temperature,
@@ -141,7 +145,8 @@ nonisolated struct ScoringEngine {
 
     // MARK: - Recovery
 
-    private func recoveryScore(hrv: Double?, restingHR: Double?, respiratoryRate: Double?, sleepPerformance: Double?,
+    private func recoveryScore(hrv: Double?, restingHR: Double?, respiratoryRate: Double?, sleepScore: Double?,
+                               wristTemperature: Double?, overnightHRTrend: Double?,
                                history: [DayMetrics], baselines: Baselines) -> RecoveryScore? {
         // HRV is log-normally distributed, so compare in log space.
         let logHistory = history.compactMap(\.hrv).filter { $0 > 0 }.map { log($0) }
@@ -156,14 +161,27 @@ nonisolated struct ScoringEngine {
             let effect = (-(restingHR - baseline.mean) / max(baseline.standardDeviation, 1.5)).clamped(to: -3...3)
             contributors.append(RecoveryContributor(kind: .restingHR, value: restingHR, baseline: baseline, effect: effect, weight: 0.2))
         }
-        if let sleepPerformance {
-            let effect = ((sleepPerformance - 0.85) / 0.12).clamped(to: -3...1.5)
-            contributors.append(RecoveryContributor(kind: .sleep, value: sleepPerformance * 100, baseline: nil, effect: effect, weight: 0.2))
+        if let sleepScore {
+            let effect = ((sleepScore - 0.85) / 0.12).clamped(to: -3...1.5)
+            contributors.append(RecoveryContributor(kind: .sleep, value: sleepScore * 100, baseline: nil, effect: effect, weight: 0.15))
         }
         if let respiratoryRate, let baseline = baselines.respiratoryRate, baseline.count >= configuration.minimumBaselineNights {
             // A lower-than-usual breathing rate isn't a strong positive, but a higher one is a warning sign.
             let effect = (-(respiratoryRate - baseline.mean) / max(baseline.standardDeviation, 0.5)).clamped(to: -3...1)
-            contributors.append(RecoveryContributor(kind: .respiratoryRate, value: respiratoryRate, baseline: baseline, effect: effect, weight: 0.1))
+            contributors.append(RecoveryContributor(kind: .respiratoryRate, value: respiratoryRate, baseline: baseline, effect: effect, weight: 0.05))
+        }
+        if let wristTemperature, let baseline = baselines.wristTemperature, baseline.count >= configuration.minimumBaselineNights {
+            // Symmetric: running hot or cold can both mean illness or overreaching. Only drift beyond
+            // a normal night's spread counts, so the term never boosts recovery.
+            let deviation = abs(wristTemperature - baseline.mean) / max(baseline.standardDeviation, 0.2)
+            let effect = -max(0, deviation - 1).clamped(to: 0...3)
+            contributors.append(RecoveryContributor(kind: .wristTemperature, value: wristTemperature, baseline: baseline, effect: effect, weight: 0.05))
+        }
+        if let overnightHRTrend, let baseline = baselines.overnightHRTrend, baseline.count >= configuration.minimumBaselineNights {
+            // Heart rate normally falls through the night. Flatter or rising than usual (alcohol, a late meal,
+            // illness, stress) holds recovery back.
+            let effect = (-(overnightHRTrend - baseline.mean) / max(baseline.standardDeviation, 0.75)).clamped(to: -2...1)
+            contributors.append(RecoveryContributor(kind: .overnightHeartRate, value: overnightHRTrend, baseline: baseline, effect: effect, weight: 0.05))
         }
 
         let totalWeight = contributors.reduce(0) { $0 + $1.weight }
@@ -186,9 +204,9 @@ nonisolated struct ScoringEngine {
         var zoneMinutes = Array(repeating: 0.0, count: 5)
     }
 
-    /// Banister TRIMP: time-weighted heart-rate reserve with an exponential intensity factor.
-    func cardioLoad(_ readings: ArraySlice<Reading>, until end: Date, restingHR: Double, maxHR: Double, sex: BiologicalSex) -> CardioLoad {
-        let (a, b) = sex == .female ? (0.86, 1.67) : (0.64, 1.92)
+    /// Edwards TRIMP: each minute in heart-rate zone N (50–60% of max is zone 1, 90%+ is zone 5)
+    /// contributes N points, so the load matches the zones the app shows.
+    func cardioLoad(_ readings: ArraySlice<Reading>, until end: Date, maxHR: Double) -> CardioLoad {
         var result = CardioLoad()
         var index = readings.startIndex
         while index < readings.endIndex {
@@ -199,17 +217,20 @@ nonisolated struct ScoringEngine {
             let minutes = nextDate.timeIntervalSince(reading.date).clamped(to: 0...(10 * 60)) / 60
             let fractionOfMax = reading.value / maxHR
             if fractionOfMax >= Self.strainThreshold {
-                result.zoneMinutes[min(Int((fractionOfMax - 0.5) * 10), 4)] += minutes
-                let reserve = ((reading.value - restingHR) / max(maxHR - restingHR, 1)).clamped(to: 0...1)
-                result.load += minutes * reserve * a * exp(b * reserve)
+                let zone = min(Int((fractionOfMax - 0.5) * 10), 4)
+                result.zoneMinutes[zone] += minutes
+                result.load += minutes * Double(zone + 1)
             }
             index = next
         }
         return result
     }
 
+    /// Logarithmic map from TRIMP onto 0–21: strain = 21 · ln(load + 1) / ln(D).
+    /// Early minutes move the score quickly and each extra point costs more, like perceived effort.
     static func strain(forLoad load: Double) -> Double {
-        StrainSummary.maximum * (1 - exp(-load / strainLoadConstant))
+        guard load > 0 else { return 0 }
+        return min(StrainSummary.maximum, StrainSummary.maximum * log(load + 1) / log(strainLogDenominator))
     }
 
     private func maximumHeartRate(for snapshot: HealthSnapshot) -> (Double, MaxHeartRateSource) {
@@ -236,11 +257,55 @@ nonisolated struct ScoringEngine {
         return values.count >= 5 ? values.percentile(0.1) : nil
     }
 
+    /// Least-squares slope of heart rate across the main sleep, in bpm per hour. Negative is the healthy pattern.
+    private func overnightHeartRateTrend(during night: DateInterval?, readings: [Reading]) -> Double? {
+        guard let night, night.duration >= 3 * 3600 else { return nil }
+        let points = readings.slice(from: night.start, to: night.end)
+        guard points.count >= 12 else { return nil }
+        let xs = points.map { $0.date.timeIntervalSince(night.start) / 3600 }
+        let ys = points.map(\.value)
+        guard let meanX = xs.mean, let meanY = ys.mean else { return nil }
+        let covariance = zip(xs, ys).reduce(0) { $0 + ($1.0 - meanX) * ($1.1 - meanY) }
+        let variance = xs.reduce(0) { $0 + ($1 - meanX) * ($1 - meanX) }
+        return variance > 0 ? covariance / variance : nil
+    }
+
+    /// Sleep debt carries over as a ledger: 55% of each night's unmet need (including debt it was
+    /// already carrying) rolls forward, so a few short nights add up but one full night mostly clears them.
+    static let sleepDebtCarry = 0.55
+    static let maximumSleepDebt: TimeInterval = 2 * 3600
+
     private func sleepNeed(afterStrain strain: Double?, recentSleeps: [SleepSummary]) -> SleepNeed {
         let strainExtra = max(0, (strain ?? 0) - 10) / 11 * 45 * 60
-        // Shortfalls are measured against need *without* debt, otherwise debt compounds on itself.
-        let debt = recentSleeps.suffix(3).reduce(0) { $0 + max(0, $1.need.baseline + $1.need.strain - $1.totalAsleep) }
-        return SleepNeed(baseline: configuration.sleepNeedBaseline, strain: strainExtra, debt: min(debt / 3, 45 * 60))
+        let debt = recentSleeps.last.map { Self.debt(after: $0) } ?? 0
+        return SleepNeed(baseline: configuration.sleepNeedBaseline, strain: strainExtra, debt: debt)
+    }
+
+    static func debt(after sleep: SleepSummary) -> TimeInterval {
+        let carried = sleepDebtCarry * max(0, sleep.need.total - sleep.totalAsleep)
+        // Under ten minutes isn't worth acting on.
+        return carried < 10 * 60 ? 0 : min(carried, maximumSleepDebt)
+    }
+
+    /// 0–1 sleep score: hours vs need (50%), efficiency (20%), deep + REM share (20%) and
+    /// bed/wake consistency (10%). Missing parts drop out and the rest are re-weighted.
+    static func sleepScore(asleep: TimeInterval, need: TimeInterval, efficiency: Double, hasStages: Bool,
+                           deep: TimeInterval, rem: TimeInterval, consistency: Double?) -> Double {
+        var parts: [(value: Double, weight: Double)] = [
+            (min(1, asleep / max(need, 1)), 0.5),
+            (efficiency.clamped(to: 0...1), 0.2),
+        ]
+        if hasStages, asleep > 0 {
+            // ~50% deep + REM earns full credit; little deep sleep scales it down by up to half.
+            let restorative = min(1, (deep + rem) / asleep / 0.5)
+            let deepAdequacy = min(1, deep / asleep / 0.13)
+            parts.append((restorative * (0.5 + 0.5 * deepAdequacy), 0.2))
+        }
+        if let consistency {
+            parts.append((consistency.clamped(to: 0...1), 0.1))
+        }
+        let totalWeight = parts.reduce(0) { $0 + $1.weight }
+        return parts.reduce(0) { $0 + $1.value * $1.weight } / totalWeight
     }
 
     private func sleepSummary(main: [SleepSample], naps: [[SleepSample]], need: SleepNeed, previous: [SleepSummary]) -> SleepSummary {
@@ -267,18 +332,24 @@ nonisolated struct ScoringEngine {
             return (1 - (bedDiff + wakeDiff) / 2 / 120).clamped(to: 0...1)
         }()
 
+        let hasStages = segments.contains { [.core, .deep, .rem].contains($0.stage) }
+        let efficiency = (asleep / max(end.timeIntervalSince(start), 1)).clamped(to: 0...1)
+        let score = Self.sleepScore(asleep: asleep + napTime, need: need.total, efficiency: efficiency, hasStages: hasStages,
+                                    deep: stageDurations[.deep] ?? 0, rem: stageDurations[.rem] ?? 0, consistency: consistency)
+
         return SleepSummary(
             start: start,
             end: end,
             segments: segments,
-            hasStages: segments.contains { [.core, .deep, .rem].contains($0.stage) },
+            hasStages: hasStages,
             asleep: asleep,
             naps: naps.map { DateInterval(start: $0.map(\.start).min()!, end: $0.map(\.end).max()!) },
             napTime: napTime,
             stageDurations: stageDurations,
             need: need,
+            score: score,
             performance: min(1, (asleep + napTime) / need.total),
-            efficiency: (asleep / max(end.timeIntervalSince(start), 1)).clamped(to: 0...1),
+            efficiency: efficiency,
             consistency: consistency,
             disturbances: disturbances
         )
