@@ -1,0 +1,160 @@
+{
+  "source": "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Settings/SettingsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Settings",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 68
+        }
+      },
+      {
+        "comment": "",
+        "key": "Learn",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 57
+        }
+      },
+      {
+        "comment": "",
+        "key": "Data source",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 11
+        }
+      },
+      {
+        "comment": "",
+        "key": "Review Health permissions",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 23
+        }
+      },
+      {
+        "comment": "",
+        "key": "Apple Health",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 19
+        }
+      },
+      {
+        "comment": "",
+        "key": "Demo data",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 20
+        }
+      },
+      {
+        "comment": "",
+        "key": "Data",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 28
+        }
+      },
+      {
+        "comment": "",
+        "key": "Pulse only reads from Health and never writes to it. To change access later, open the Health app, tap your profile, then Apps → Pulse.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "Custom max heart rate",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 37
+        }
+      },
+      {
+        "comment": "",
+        "key": "Max heart rate",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 49
+        }
+      },
+      {
+        "comment": "",
+        "key": "Baseline sleep need",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 35
+        }
+      },
+      {
+        "comment": "",
+        "key": "Max heart rate",
+        "location": {
+          "startingColumn": 44,
+          "startingLine": 46
+        }
+      },
+      {
+        "comment": "",
+        "key": "Personalize",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 52
+        }
+      },
+      {
+        "comment": "",
+        "key": "Max heart rate: %@. It sets your heart rate zones and how strain is calculated.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 54
+        }
+      },
+      {
+        "comment": "",
+        "key": "How the scores work",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "Last updated",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 62
+        }
+      },
+      {
+        "comment": "",
+        "key": "Version",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 63
+        }
+      },
+      {
+        "comment": "",
+        "key": "How scores work",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 106
+        }
+      },
+      {
+        "comment": "",
+        "key": "Pulse is a wellness app, not a medical device. Talk to a doctor about any health concerns.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 99
+        }
+      }
+    ]
+  },
+  "version": 1
+}

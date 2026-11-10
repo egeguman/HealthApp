@@ -1,0 +1,32 @@
+{
+  "source": "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Detail/StrainDetailView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Strain",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "Optimal strain for today: %@",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 18
+        }
+      },
+      {
+        "comment": "",
+        "key": "STRAIN",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 104
+        }
+      }
+    ]
+  },
+  "version": 1
+}

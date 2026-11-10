@@ -1,0 +1,96 @@
+{
+  "source": "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/RootView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Something went wrong",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 15
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 19
+        }
+      },
+      {
+        "comment": "",
+        "key": "Today",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 35
+        }
+      },
+      {
+        "comment": "",
+        "key": "Activity",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 38
+        }
+      },
+      {
+        "comment": "",
+        "key": "Trends",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "Settings",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 44
+        }
+      },
+      {
+        "comment": "",
+        "key": "Know when to push.\nKnow when to rest.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 106
+        }
+      },
+      {
+        "comment": "",
+        "key": "Pulse turns the data your Apple Watch already collects into three simple daily scores, and tells you what they mean.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 108
+        }
+      },
+      {
+        "comment": "",
+        "key": "Explore with demo data",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 143
+        }
+      },
+      {
+        "comment": "",
+        "key": "Read-only. Your data stays on your iPhone.",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 150
+        }
+      },
+      {
+        "comment": "",
+        "key": "Connect Apple Health",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 133
+        }
+      }
+    ]
+  },
+  "version": 1
+}

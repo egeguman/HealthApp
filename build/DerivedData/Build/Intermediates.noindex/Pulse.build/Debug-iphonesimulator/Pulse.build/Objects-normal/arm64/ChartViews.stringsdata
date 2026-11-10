@@ -1,0 +1,152 @@
+{
+  "source": "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Components/ChartViews.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Start",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 20
+        }
+      },
+      {
+        "comment": "",
+        "key": "End",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 21
+        }
+      },
+      {
+        "comment": "",
+        "key": "Stage",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 22
+        }
+      },
+      {
+        "comment": "",
+        "key": "Zone 1",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 62
+        }
+      },
+      {
+        "comment": "",
+        "key": "Start",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 59
+        }
+      },
+      {
+        "comment": "",
+        "key": "End",
+        "location": {
+          "startingColumn": 92,
+          "startingLine": 59
+        }
+      },
+      {
+        "comment": "",
+        "key": "Strain starts here",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 66
+        }
+      },
+      {
+        "comment": "",
+        "key": "Time",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 71
+        }
+      },
+      {
+        "comment": "",
+        "key": "Floor",
+        "location": {
+          "startingColumn": 74,
+          "startingLine": 71
+        }
+      },
+      {
+        "comment": "",
+        "key": "BPM",
+        "location": {
+          "startingColumn": 101,
+          "startingLine": 71
+        }
+      },
+      {
+        "comment": "",
+        "key": "Time",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 74
+        }
+      },
+      {
+        "comment": "",
+        "key": "BPM",
+        "location": {
+          "startingColumn": 69,
+          "startingLine": 74
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@–%@ bpm",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 111
+        }
+      },
+      {
+        "comment": "",
+        "key": "Day",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 138
+        }
+      },
+      {
+        "comment": "",
+        "key": "Recovery",
+        "location": {
+          "startingColumn": 75,
+          "startingLine": 138
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 142
+        }
+      },
+      {
+        "comment": "",
+        "key": "Day",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 165
+        }
+      },
+      {
+        "comment": "",
+        "key": "Strain",
+        "location": {
+          "startingColumn": 71,
+          "startingLine": 165
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,72 @@
+{
+  "source": "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Detail/SleepDetailView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Sleep",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 38
+        }
+      },
+      {
+        "comment": "",
+        "key": "SLEEP PERFORMANCE",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 13
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ of %@ needed",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 18
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tonight, aim for bed by %@",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 56
+        }
+      },
+      {
+        "comment": "",
+        "key": "You'll need %@ of sleep after today's strain.",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "Total need",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 99
+        }
+      },
+      {
+        "comment": "",
+        "key": "Naps counted",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 105
+        }
+      },
+      {
+        "comment": "",
+        "key": "+%@",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 122
+        }
+      }
+    ]
+  },
+  "version": 1
+}

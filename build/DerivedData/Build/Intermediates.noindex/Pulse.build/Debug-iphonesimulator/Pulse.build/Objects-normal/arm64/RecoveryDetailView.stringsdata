@@ -1,0 +1,48 @@
+{
+  "source": "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Detail/RecoveryDetailView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Recovery",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 46
+        }
+      },
+      {
+        "comment": "",
+        "key": "Usual %@ %@",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "Lower",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 113
+        }
+      },
+      {
+        "comment": "",
+        "key": "Your normal range",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 115
+        }
+      },
+      {
+        "comment": "",
+        "key": "Higher",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 117
+        }
+      }
+    ]
+  },
+  "version": 1
+}

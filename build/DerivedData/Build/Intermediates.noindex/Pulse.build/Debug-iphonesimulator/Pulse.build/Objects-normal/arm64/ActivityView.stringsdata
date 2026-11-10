@@ -1,0 +1,104 @@
+{
+  "source": "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Activity/ActivityView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "DAY STRAIN",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 102
+        }
+      },
+      {
+        "comment": "",
+        "key": "Target %@",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 149
+        }
+      },
+      {
+        "comment": "",
+        "key": "Start",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 185
+        }
+      },
+      {
+        "comment": "",
+        "key": "End",
+        "location": {
+          "startingColumn": 82,
+          "startingLine": 185
+        }
+      },
+      {
+        "comment": "",
+        "key": "Row",
+        "location": {
+          "startingColumn": 108,
+          "startingLine": 185
+        }
+      },
+      {
+        "comment": "",
+        "key": "Now",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 195
+        }
+      },
+      {
+        "comment": "",
+        "key": "Start",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 189
+        }
+      },
+      {
+        "comment": "",
+        "key": "End",
+        "location": {
+          "startingColumn": 86,
+          "startingLine": 189
+        }
+      },
+      {
+        "comment": "",
+        "key": "Row",
+        "location": {
+          "startingColumn": 45,
+          "startingLine": 190
+        }
+      },
+      {
+        "comment": "",
+        "key": "Z%lld",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 336
+        }
+      },
+      {
+        "comment": "",
+        "key": "Day",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 368
+        }
+      },
+      {
+        "comment": "",
+        "key": "Minutes",
+        "location": {
+          "startingColumn": 75,
+          "startingLine": 368
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,16 @@
+{
+  "source": "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse/Views/Today/TodayView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "No sleep or workouts recorded for this day.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 164
+        }
+      }
+    ]
+  },
+  "version": 1
+}

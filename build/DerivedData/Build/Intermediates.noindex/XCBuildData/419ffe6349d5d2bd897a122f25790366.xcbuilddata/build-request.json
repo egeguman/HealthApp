@@ -1,0 +1,70 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "672d8c4e5e4501786b9bd984bab4cfb3ff6fbb3ced5349a57eed8ddc7531dfe3"
+    }
+  ],
+  "containerPath" : "/Users/egeguman/Desktop/Projects/whoop_clone/Pulse.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "hostTargetedPlatform" : null,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator27.2",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "arm64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Products",
+      "derivedDataPath" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/egeguman/Desktop/Projects/whoop_clone/build/DerivedData/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPhone19,2",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "27.0",
+          "ASSETCATALOG_FILTER_FOR_THINNING_DEVICE_CONFIGURATION" : "iPhone19,2",
+          "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "YES",
+          "TARGET_DEVICE_IDENTIFIER" : "02EC5AF6-D1ED-4F12-8B3F-F4C9BFB7EA78",
+          "TARGET_DEVICE_MODEL" : "iPhone19,2",
+          "TARGET_DEVICE_OS_VERSION" : "27.0",
+          "TARGET_DEVICE_PLATFORM_NAME" : "iphonesimulator"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
